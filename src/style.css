@@ -1,0 +1,35 @@
+body {
+background-image:url(img/background.png);
+}
+
+.template {
+    height: 800px;
+    width: 570px;
+    margin: 4px 0 0 20%;
+    border: 4px solid #B30C52;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+header {
+    text-align: center;
+    color:#DE2672;
+}
+
+#home{
+    top:3%;
+    left: 56.4%;
+    position: absolute;
+}
+
+#logo{
+    width: 60px;
+    height: 60px;
+}
+
+
+/* COLORES
+
+#1598B3
+#B30C52
+*/
