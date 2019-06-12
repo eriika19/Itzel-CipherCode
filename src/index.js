@@ -4,4 +4,4 @@ home.addEventListener('click',goHome);
 
 
 
-console.log(window.cipher.decode('bcd',1));
+console.log(window.cipher.encode('bcd',1));

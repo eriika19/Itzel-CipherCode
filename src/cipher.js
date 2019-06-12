@@ -7,7 +7,7 @@ window.cipher = {
           newStr [i] === 'Ñ') {
       encodeStr += newStr[i];
       } else {
-        let newPosition = ((newStr.charCodeAt(i)-65+n)%26)+65;
+        let newPosition = newStr.charCodeAt(i)+(n%26);
         let newLetter = String.fromCharCode(newPosition);
         encodeStr += newLetter;
       }
