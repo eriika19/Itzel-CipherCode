@@ -7,6 +7,72 @@
     <title>Cipher KIDS</title>
 </head>
 <body>
-    
+<header>"Encabezado"</header>
+<main>
+    <div id="welcome" class="hide">
+        <div id="character">
+            <img id="KEY" src="img/KEY.png" alt="character-KEY">
+        </div>
+        <div id="presentation">
+            <p> 'Presentación' </p>
+        </div>
+    </div>
+
+    <div id="options" class="hide">
+        <div id="decode-option">
+            <p> .... </p>
+            <img id="button-decode" src="" alt="buttonD">
+        </div>
+        <div id="encode-option">
+            <p> .... </p>
+            <img id="button-encode" src="" alt="buttonE">
+        </div>
+    </div>
+
+    <div id="decode" class="hide">
+            <div id="decode1" class="text">
+              <p>...</p>
+            </div>
+            <div id="decode2">
+              <form action="function()" class="input">
+                  <label for="decode-form">Ingresa tu enigma:</label>
+                  <input type="text" id="decode-input1" placeholder="Ingresa tu texto-enigma" required>
+                  <input type="text" id="decode-input2" placeholder="Ingresa tu desplazamiento" required>
+                  <button id="decode-form" type="submit">¡Manos a la obra!</button>
+              </form>
+              <form action="function()" class="output">
+                  <label for="output-decode"></label>
+                  <input type="text" id="output-decode" placeholder="Aqui aparecera tu codigo descifrado">
+                  <button type="submit">Copiar</button>
+              </form>
+            </div>
+    </div>
+
+    <div id="endecode" class="hide">
+            <div id="endecode1" class="text">
+              <p>...</p>
+            </div>
+            <div id="endecode2">
+              <form action="function()" class="input">
+                  <label for="encode-input1">Ingresa tu información secret:</label>
+                  <input type="text" id="encode-input1" placeholder="Mensaje a cifrar" required>
+                  <label for="encode-input2">Ingresa tu desplazamiento:</label>
+                  <input type="text" id="encode-input2" placeholder="Offset elegido" required>
+                  <button id="decode-form" type="submit">¡Manos a la obra!</button>
+              </form>
+              <form action="function()" class="output">
+                  <label for="output-decode"></label>
+                  <input type="text" id="output-decode" placeholder="Aqui aparecera tu codigo cifrado">
+                  <button type="submit">Copiar</button>
+              </form>
+            </div>
+    </div>
+
+
+</main>
+<footer>Pie de página</footer>
+<script src="cipher.js"></script>
+<script src="index.js"></script>
 </body>
+
 </html>
