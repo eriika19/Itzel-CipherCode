@@ -25,9 +25,8 @@ header {
 }
 
 main {
-    height: 597px;
+    height: 582px;
     color: black;
-    font-size: 25px;
     font-weight: bolder;
     background-image:url(style/cipher-background.png);
     background-size: contain;
@@ -37,6 +36,24 @@ main {
 
 footer {
     padding: 10px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+#welcome, #exit {
+    font-size: 27px;
+}
+
+#exit {
+    text-align: center;
+}
+
+#options {
+    font-size: 24px;
+}
+
+#decode, #encode {
+    font-size: 20px;
 }
 
 /*seciones y botones*/
@@ -44,7 +61,7 @@ footer {
 #encode-option, #decode-option {
     width: 48%;
     height: 275px;
-    padding-top: 8px;
+    padding-top: 2px;
     text-align: center;
 }
 
@@ -67,7 +84,7 @@ footer {
     float: left;
 }
 
-#KEY, #hat, #pipe, #encode-option, #Set, #cipher2 {
+#Key, #hat, #pipe, #encode-option, #Set, #cipher2 {
     float: right;
 }
 
@@ -80,22 +97,21 @@ footer {
 }
 
 #hat {
-    top: 2.2%;
-    left: 110.5%;
-    position: absolute;
+    top: -151%;
+    left: -3%;
+    position: relative;
 }
 
 #pipe {
-    top: 14.8%;
-    left: 97%;
-    position: absolute;
+    top: -10%;
+    left: 1%;
+    position: relative;
 }
 
 #Key {
     height: 380px;
     width: 214px;
     padding-left: 20px;
-    padding-right: 7px;
 }
 
 #Key2 {
@@ -111,18 +127,18 @@ footer {
 }
 
 #dog {
-    height: 220px;
+    height: 200px;
     width: 166px;
-    padding-top: 33px;
+    padding-top: 4px;
     padding-right: 12px;
 }
 
 #cipher2 {
     width: 70px;
     height: 70px;
-    bottom: -44.5%;
-    left: 118%;
-    position: absolute;
+    top: 100%;
+    left: 0%;
+    position: relative;
 }
 
 /* input */
