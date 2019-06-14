@@ -1,0 +1,165 @@
+* {
+    font-family: 'Stencil', 'Berlin Sans FB Demi', arial Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif 'Segoe UI';
+   }
+
+body {
+    height: 907px;
+    width: 720px;
+    margin: 4px 0 0 20%;
+    border: 4px solid #BA0DFF;
+    padding: 4px;
+    border-radius: 10px;
+    }
+
+/*Ocultar secciones con clase 'hide'*/
+.hide {
+    display: none;
+}
+
+header {
+    height: 145.6px;
+    text-align: center;
+    color: rgb(139, 18, 18);
+    font-size: 54px;
+    font-weight: bolder;
+}
+
+main {
+    height: 597px;
+    color: black;
+    font-size: 25px;
+    font-weight: bolder;
+    background-image:url(style/cipher-background.png);
+    background-size: contain;
+    background-repeat: repeat;
+    padding: 10px;
+}
+
+footer {
+    padding: 10px;
+}
+
+/*seciones y botones*/
+
+#encode-option, #decode-option {
+    width: 48%;
+    height: 275px;
+    padding-top: 8px;
+    text-align: center;
+}
+
+#encode-form, #decode-form {
+    width: 48%;
+    height: 275px;
+    padding-top: 8px;
+}
+
+
+/*botones*/
+#decode-option-button, #encode-option-button {
+
+}
+
+/* imágenes*/
+#logo, #hide-detective, #decode-option, #dog,
+#encode-form, #decode-form,
+#output-decode, #output-encode {
+    float: left;
+}
+
+#KEY, #hat, #pipe, #encode-option, #Set, #cipher2 {
+    float: right;
+}
+
+#logo {
+    top: 1.9%;
+    left: 23%;
+    height: 200px;
+    width: 155px;
+    position: absolute;
+}
+
+#hat {
+    top: 2.2%;
+    left: 110.5%;
+    position: absolute;
+}
+
+#pipe {
+    top: 14.8%;
+    left: 97%;
+    position: absolute;
+}
+
+#Key {
+    height: 380px;
+    width: 214px;
+    padding-left: 20px;
+    padding-right: 7px;
+}
+
+#Key2 {
+    height: 340px;
+    width: 194px;
+    padding-left: 20px;
+    padding-right: 7px;
+}
+
+#hide-detective {
+    height: 157px;
+    width: 145px;
+}
+
+#dog {
+    height: 220px;
+    width: 166px;
+    padding-top: 33px;
+    padding-right: 12px;
+}
+
+#cipher2 {
+    width: 70px;
+    height: 70px;
+    bottom: -44.5%;
+    left: 118%;
+    position: absolute;
+}
+
+/* input */
+
+#decode-input1, #encode-input1 {
+    height: 100px;
+    width: 300px;
+    border-width: 3px;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+#decode-input2, #encode-input2 {
+    height: 18px;
+    width: 34px;
+    border-width: 2px;
+    font-size: 12.5px;
+}
+
+/* output */
+
+#decode-output, #encode-output {
+    height: 100px;
+    width: 300px;
+    border-width: 3px;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+#output-decode, #decode-input2, #encode-input2,
+#decode-button, #encode-button {
+margin-top: 17px;
+}
+
+/* COLORES
+
+#B30C52
+#BA0DFF
+#FFBA26
+*/

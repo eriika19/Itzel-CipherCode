@@ -5,72 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cipher KIDS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>"Encabezado"</header>
+
+<header>
+    <img id="logo" src="img/cipher-dog.png" alt="cipher-dog">
+    <p>Cipher<br>KIDS</p>
+    <img id= "hat" src="img/hat.png" alt="hat">
+    <img id="pipe" src="img/pipe.png" alt="pipe">
+</header>
+<hr style="color:#1FCC7F; width: 96%; border-width: 4px; border-radius: 4px">
 <main>
-    <div id="welcome" class="hide">
-        <div id="character">
-            <img id="KEY" src="img/KEY.png" alt="character-KEY">
-        </div>
+
+    <div id="welcome">
+        <img id="Key" src="img/KEY.png" alt="character-Key">
         <div id="presentation">
-            <p> 'Presentación' </p>
+            <p>¡Hola Criptologx!
+                <br>Soy Key, la mejor detective más audaz del planeta. 
+                <br>Amo descifrar enigmas y resolver misterios escondidos. 
+                Mis mejores amigos son Set y Cipher.
+                <br> ¡Están impacientes por verte!
+                <br> ¿Comenzamos?
+            </p>
+            <button><img id="hide-detective" src="img/hide-detective.png" alt="hide-detective"></button>
         </div>
     </div>
 
     <div id="options" class="hide">
+            <img id="Set" src="img/kid-glass.png" alt="Set">
+        <p> ¡Hola, soy Set, el mejor amigo de Key. Es un gusto verte!
+            <br><img id="dog" src="img/dog.png" alt="dog"> 
+            <br> El es Cipher, el mejor perro detective del mundo.
+            <br><br> Siempre está en busca de nuevas pistas.
+            <br><br>¿Qué necesitas hoy?<br>
+        </p>
         <div id="decode-option">
-            <p> .... </p>
-            <img id="button-decode" src="" alt="buttonD">
+            <p> ¿Has encontrado un nuevo enigma a descifrar? <br>
+            <br>¡Que emoción!</p>
+            <button><img id="decode-option-button" src="img/magnified.png" alt="decode-option"></button> 
         </div>
         <div id="encode-option">
-            <p> .... </p>
-            <img id="button-encode" src="" alt="buttonE">
+            <p> ¿Misión ultra secreta? <br>
+            <br>¡Impide que información valiosa caiga en las manos equivocadas! </p>
+            <button><img id="encode-option-button" src="img/detective-glasses.png" alt="encode-option"></button> 
         </div>
     </div>
 
     <div id="decode" class="hide">
-            <div id="decode1" class="text">
-              <p>...</p>
-            </div>
-            <div id="decode2">
-              <form action="function()" class="input">
-                  <label for="decode-form">Ingresa tu enigma:</label>
-                  <input type="text" id="decode-input1" placeholder="Ingresa tu texto-enigma" required>
-                  <input type="text" id="decode-input2" placeholder="Ingresa tu desplazamiento" required>
-                  <button id="decode-form" type="submit">¡Manos a la obra!</button>
-              </form>
-              <form action="function()" class="output">
-                  <label for="output-decode"></label>
-                  <input type="text" id="output-decode" placeholder="Aqui aparecera tu codigo descifrado">
-                  <button type="submit">Copiar</button>
-              </form>
-            </div>
+        <p>Echemos un vistazo a ese enigma</p>
+        <img id="Set2" src="img/kid-glass2.png" alt="Set2">
+      <div id="decode-form">
+        <label for="decode-input1">Ingresa tu enigma:</label>
+        <input type="text" id="decode-input1" placeholder="Ingresa tu texto-enigma" required>
+        <br> 
+        <label for="decode-input2">Desplazamiento:</label>
+        <input type="text" id="decode-input2" placeholder="Offset" required>
+        <br>
+        <button id="decode-button" type="submit">¡A descifrar!</button>
+      </div>
+     <form id="output-decode" class="output">
+        <label for="decode-output"></label>
+        <input type="text" id="decode-output" placeholder="Aquí aparecerá tu texto-enigma descifrado">
+        <button type="submit">Copiar</button>
+      </form>
     </div>
+    
 
-    <div id="endecode" class="hide">
-            <div id="endecode1" class="text">
-              <p>...</p>
-            </div>
-            <div id="endecode2">
-              <form action="function()" class="input">
-                  <label for="encode-input1">Ingresa tu información secret:</label>
-                  <input type="text" id="encode-input1" placeholder="Mensaje a cifrar" required>
-                  <label for="encode-input2">Ingresa tu desplazamiento:</label>
-                  <input type="text" id="encode-input2" placeholder="Offset elegido" required>
-                  <button id="decode-form" type="submit">¡Manos a la obra!</button>
-              </form>
-              <form action="function()" class="output">
-                  <label for="output-decode"></label>
-                  <input type="text" id="output-decode" placeholder="Aqui aparecera tu codigo cifrado">
-                  <button type="submit">Copiar</button>
-              </form>
-            </div>
-    </div>
+    <div id="encode" class="hide">
+            <p>Esta información es muy importante, será mejor encriptarla</p>
+            <img id="Key2" src="img/KEY.png" alt="Key">
+          <div id="encode-form">
+            <label for="encode-input1">Ingresa tu información <br> "top-secret":</label>
+            <input type="text" id="encode-input1" placeholder="Ingresa tu mensaje a encriptar" required>
+            <br>
+            <label for="encode-input2">Desplazamiento:</label>
+            <input type="text" id="encode-input2" placeholder="Offset" required>
+            <br>
+            <button id="encode-button" type="submit">¡Manos a la obra!</button>
+          </div>
+         <form id= "output-encode" class="output">
+            <label for="encode-output"></label>
+            <input type="text" id="encode-output" placeholder="Aquí aparecerá tu texto cifrado">
+            <button type="submit">Copiar</button>
+          </form>
+        </div>
 
 
 </main>
-<footer>Pie de página</footer>
+<footer>Derechos Reservados <img id="cipher2" src="img/cipher-fingerprint.png" alt="cipher2"> </footer>
 <script src="cipher.js"></script>
 <script src="index.js"></script>
 </body>
