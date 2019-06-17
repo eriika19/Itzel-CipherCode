@@ -1,5 +1,5 @@
 * {
-    font-family: 'Stencil', 'Berlin Sans FB Demi', arial Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif 'Segoe UI';
+    font-family:  'Allerta Stencil', sans-serif;
    }
 
 body {
@@ -17,33 +17,34 @@ body {
 }
 
 header {
-    height: 145.6px;
+    height: 142px;
     text-align: center;
     color: rgb(139, 18, 18);
-    font-size: 54px;
-    font-weight: bolder;
+    font-size: 56px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 main {
-    height: 582px;
+    height: 650px;
     color: black;
-    font-weight: bolder;
     background-image:url(style/cipher-background.png);
     background-size: contain;
     background-repeat: repeat;
     padding: 10px;
+    font-weight: bold;
 }
 
 footer {
     padding: 10px;
     font-size: 15px;
-    font-weight: bolder;
 }
 
 
 /* secciones */
 #welcome, #exit {
-    font-size: 27px;
+    font-size: 28px;
 }
 
 #exit {
@@ -58,14 +59,35 @@ footer {
     font-size: 20px;
 }
 
+#welcome p {
+margin-top: 50px;
+}
+
+#p-header1 {
+margin: 0;
+text-align: center;
+}
+
+#p-header2 {
+    margin: 0;
+    padding-left: 40%;
+    }
+
 /*subsecciones*/
 
 #encode-option, #decode-option {
-    width: 48%;
+    width: 49%;
     height: 275px;
-    padding-top: 2px;
+    padding: 2px;
     text-align: center;
+    border-radius: 22px;
 }
+
+#encode-option:hover, #decode-option:hover {
+    background-color:rgba(255, 236, 220, 0.63);
+    cursor: pointer;
+}
+
 
 #encode-form, #decode-form {
     width: 48%;
@@ -75,12 +97,37 @@ footer {
 
 
 /*botones*/
-#decode-option-button, #encode-option-button {
 
+#start {
+    margin-top: 40px;
 }
 
-#decode-button, #encode-button {
-    margin-top: 22px;
+#return-start {
+    margin-top: 18px;
+}
+
+#start, #return-start {
+    padding-top: 10px;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+    align-self: center;
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+
+#decode-option-button, #encode-option-button {
+    border-radius: 10px;
+}
+
+#decode-button, #encode-button,
+#return-options1, #return-options2,
+#go-exit1, #go-exit2 {
+    margin-top: 20px;
+    height: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 /* imágenes y subsecciones*/
@@ -94,17 +141,11 @@ footer {
 }
 
 #logo {
-    top: 1.9%;
-    left: 23%;
-    height: 200px;
-    width: 155px;
+    margin-left: 8px;
+    top: 2.2%;
+    left: 21.2%;
     position: absolute;
-}
-
-#hat {
-    top: -151%;
-    left: -3%;
-    position: relative;
+    border-radius: 8px;
 }
 
 #pipe {
@@ -114,23 +155,19 @@ footer {
 }
 
 #Key {
-    height: 380px;
-    width: 214px;
     padding-left: 20px;
+    width: 37%;
 }
 
 #Key2 {
-    height: 340px;
-    width: 194px;
-    padding-left: 20px;
-    padding-right: 7px;
+    padding-left: 50px;
+    padding-top: 50px;
 }
-
+/*
 #hide-detective {
     height: 157px;
     width: 145px;
-}
-
+} */
 #dog {
     height: 200px;
     width: 166px;
@@ -139,40 +176,36 @@ footer {
 }
 
 #cipher2 {
-    width: 70px;
-    height: 70px;
+    width: 12%;
     top: 100%;
     left: 0%;
     position: relative;
+    border-radius: 8px;
 }
 
-/* input */
+/* input y output*/
 
-#decode-input1, #encode-input1 {
-    height: 100px;
-    width: 300px;
+#decode-input1, #encode-input1,
+#decode-output, #encode-output {
+    height: 95px;
+    width: 315px;
     border-width: 3px;
     font-size: 15px;
     margin-top: 15px;
+    border-radius: 15px;
 }
 
 #decode-input2, #encode-input2 {
     height: 18px;
-    width: 34px;
+    width: 40px;
     border-width: 2px;
     font-size: 12.5px;
     margin-top: 12px;
+    border-radius:7px;
 }
 
-/* output */
+/* output  oculto*/
 
-#decode-output, #encode-output {
-    height: 100px;
-    width: 300px;
-    border-width: 3px;
-    font-size: 15px;
-    margin-top: 15px;
-}
 
 #decode-label, #encode-label {
     margin-top: 15px;
