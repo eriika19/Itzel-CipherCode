@@ -1,108 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cipher KIDS</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Cipher KIDS</title>
 </head>
+
 <body>
-  <script src="cipher.js"></script>
-  <script src="index.js"></script>
-<header>
+
+  <header id='header'>
     <img id="logo" src="img/cipher-dog.png" alt="cipher-dog">
     <p>Cipher<br>KIDS</p>
-    <img id= "hat" src="img/hat.png" alt="hat">
-</header>
-<hr style="color:#1FCC7F; width: 96%; border-width: 4px; border-radius: 4px">
-<main>
+    <img id="hat" src="img/hat.png" alt="hat">
+  </header>
+  <hr style="color:#1FCC7F; width: 96%; border-width: 4px; border-radius: 4px">
+  <main>
 
-    <div id="welcome" class="hide">
-        <img id="pipe" src="img/pipe.png" alt="pipe">
-        <div id="presentation">
-            <p>¡Hola Criptologx! <br>
-                <br>Soy Key, la mejor detective más audaz. <br>
-                <br>Amo descifrar enigmas y resolver misterios escondidos.
-                <img id="Key" src="img/KEY.png" alt="character-Key">
-                Mis mejores amigos son Set y Cipher. <br>
-                <br> ¡Están impacientes por verte! <br>
-                <br> ¿Comenzamos?
-            </p>
-            <button><img  id="hide-detective" src="img/hide-detective.png" alt="hide-detective" class="go-options"></button>
-        </div>
+    <div id="welcome" class="">
+      <img id="pipe" src="img/pipe.png" alt="pipe">
+      <div id="presentation">
+        <p>¡Hola Criptologx! <br>
+          <br>Soy Key, la mejor detective más audaz. <br>
+          <br>Amo descifrar enigmas y resolver misterios escondidos.
+          <img id="Key" src="img/KEY.png" alt="character-Key">
+          Mis mejores amigos son Set y Cipher. <br>
+          <br> ¡Están impacientes por verte! <br>
+          <br> ¿Comenzamos?
+        </p>
+        <button><img id="hide-detective" src="img/hide-detective.png" alt="hide-detective"></button>
+      </div>
     </div>
 
     <div id="options" class="hide">
-            <img id="Set" src="img/kid-glass.png" alt="Set">
-        <p> ¡Hola, soy Set, el mejor amigo de Key. Es un gusto verte <br>
-            <br> El es Cipher, el mejor perro detective del mundo.
-            <img id="dog" src="img/dog.png" alt="dog"> <br>
-            <br> Siempre está en busca de nuevas pistas.
-            <br><br>¿Qué necesitas hoy?</p><br>
-        <div id="decode-option">
-            <p> ¿Has encontrado un nuevo enigma a descifrar? <br>
-            <br>¡Que emoción!</p>
-            <button><img id="decode-option-button" src="img/magnified.png" alt="decode-option" class="go-decode"></button>
-        </div>
-        <div id="encode-option">
-            <p> ¿Misión ultra secreta? <br>
-            <br>¡Impide que información valiosa caiga en las manos equivocadas! </p>
-            <button><img id="encode-option-button" src="img/detective-glasses.png" alt="encode-option" class="go-encode"></button>
-        </div>
+      <img id="Set" src="img/kid-glass.png" alt="Set">
+      <p> ¡Hola, soy Set, el mejor amigo de Key. Es un gusto verte <br>
+        <br> El es Cipher, el mejor perro detective del mundo.
+        <img id="dog" src="img/dog.png" alt="dog"> <br>
+        <br> Siempre está en busca de nuevas pistas.
+        <br><br>¿Qué necesitas hoy?</p><br>
+      <div id="decode-option">
+        <p> ¿Has encontrado un nuevo enigma a descifrar? <br>
+          <br>¡Que emoción!</p>
+        <button><img id="decode-option-button" src="img/magnified.png" alt="decode-option" class="go-decode"></button>
+      </div>
+      <div id="encode-option">
+        <p> ¿Misión ultra secreta? <br>
+          <br>¡Impide que información valiosa caiga en las manos equivocadas! </p>
+        <button><img id="encode-option-button" src="img/detective-glasses.png" alt="encode-option"
+            class="go-encode"></button>
+      </div>
     </div>
 
     <div id="decode" class="hide">
-        <p>Echemos un vistazo a ese enigma</p>
-        <img id="Set2" src="img/kid-glass2.png" alt="Set2">
-      <div id="decode-form">
+      <h3>Echemos un vistazo a ese enigma</h3>
+      <img id="Set2" src="img/kid-glass2.png" alt="Set2">
+      <form id="decode-form">
         <label for="decode-input1">Ingresa tu enigma:</label>
         <input type="text" id="decode-input1" placeholder="Ingresa tu texto-enigma" required>
         <br>
         <label for="decode-input2">Desplazamiento:</label>
         <input type="text" id="decode-input2" placeholder="Offset" required>
         <br>
-        <button id="decode-button" type="submit">¡A descifrar!</button>
-      </div>
-     <form id="output-decode" class="output">
-        <label for="decode-output"></label>
-        <input type="text" id="decode-output" placeholder="Aquí aparecerá tu texto-enigma descifrado">
-        <button type="submit">Copiar</button>
-     </form>
-     <br><br><br><br><br><br><br><br>
-     <button class="go-options">Regresar</button>&nbsp;&nbsp;&nbsp;<button class="go-exit">Salir</button>
+        <button id="decode-button" type="button">¡A descifrar!</button>
+        <br>
+        <label id="decode-label" for="decode-output" class="hide"><h3>¡Ahora está descifrado!</h3></label>
+        <input  id="decode-output"
+          placeholder="Aquí aparecerá tu texto-enigma descifrado">
+        <br><br>
+        <button id="return-options1">Regresar</button>&nbsp;&nbsp;&nbsp;<button id="go-exit1">Salir</button>
+      </form>
     </div>
 
-    <div id="encode" class="">
-            <p>Esta información es muy importante, será mejor encriptarla</p>
-            <img id="Key2" src="img/KEY.png" alt="Key">
-          <div id="encode-form">
-            <label for="encode-input1">Ingresa tu información <br> "top-secret":</label>
-            <input type="text" id="encode-input1" placeholder="Ingresa tu mensaje a encriptar" required>
-            <br>
-            <label for="encode-input2">Desplazamiento:</label>
-            <input type="text" id="encode-input2" placeholder="Offset" required>
-            <br>
-            <button id="encode-button" type="submit">¡Manos a la obra!</button>
-          </div>
-         <form id= "output-encode" class="output">
-            <label for="encode-output"></label>
-            <input type="text" id="encode-output" placeholder="Aquí aparecerá tu texto cifrado">
-            <button type="submit">Copiar</button>
-         </form>
-         <br><br><br><br><br><br><br><br>
-         <button class="go-options">Regresar</button>&nbsp;&nbsp;&nbsp;<button class="go-exit">Salir</button>
-        </div>
+    <div id="encode" class="hide">
+      <h3>¡Que importante información, será mejor encriptarla!</h3>
+      <img id="Key2" src="img/KEY.png" alt="Key">
+      <form id="encode-form">
+        <label for="encode-input1">Ingresa tu información <br> "top-secret":</label>
+        <input type="text" id="encode-input1" placeholder="Ingresa tu mensaje a encriptar" required>
+        <br>
+        <label for="encode-input2">Desplazamiento:</label>
+        <input type="text" id="encode-input2" placeholder="Offset" required>
+        <br>
+        <button id="encode-button" type="button">¡Manos a la obra!</button>
+        <br>
+        <label id="encode-label" for="encode-output" class="hide"><h3>¡Lo hemos encriptado!</h3>
+          Recuerda enviar la pista secreta (offset) a tus amigos</label>
+        <input id="encode-output" placeholder="Aquí aparecerá tu texto cifrado">
+        <p id="p-encode" class=""> <br><br> </p>
+        <button id="return-options2">Regresar</button>&nbsp;&nbsp;&nbsp;<button id="go-exit2">Salir</button>
+        </form>
+    </div>
 
-<div id="exit" class="hide">
-Muchas gracias por usar Cipher KIDS. <br><br><br> ¡Hasta la próxima aventura!
-<br><img src="img/LadyGeek.png" alt="LadyGeek">
+    <div id="exit" class="hide">
+      Muchas gracias por usar Cipher KIDS. <br><br><br> ¡Hasta la próxima aventura!
+      <br><img src="img/LadyGeek.png" alt="LadyGeek">
+    </div>
+  </main>
 
-</div>
+  <footer>Derechos Reservados <img id="cipher2" src="img/cipher-fingerprint.png" alt="cipher2"> </footer>
 
-</main>
-<footer>Derechos Reservados <img id="cipher2" src="img/cipher-fingerprint.png" alt="cipher2"> </footer>
-
+  <script src="cipher.js"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>
