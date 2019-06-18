@@ -98,19 +98,23 @@ returnOptions1.addEventListener('click', (e) => {
     goSection(options);
     cleanFormD();
     e.preventDefault();
+    clear ();
 });
 returnOptions2.addEventListener('click', (e) => {
     goSection(options);
     cleanFormE();
     e.preventDefault();
+    clear ();
 });
 goExit1.addEventListener('click', (e) => {
     goSection(exit);
     cleanFormD();
     e.preventDefault();
+    clear ();
 });
 goExit2.addEventListener('click', (e) => {
     goSection(exit);
     cleanFormE();
     e.preventDefault();
+    clear ();
 });

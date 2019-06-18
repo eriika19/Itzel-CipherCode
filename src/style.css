@@ -27,7 +27,7 @@ header {
 }
 
 main {
-    height: 650px;
+    height: 655px;
     color: black;
     background-image:url(style/cipher-background.png);
     background-size: contain;
@@ -52,7 +52,7 @@ footer {
 }
 
 #options {
-    font-size: 24px;
+    font-size: 26px;
 }
 
 #decode, #encode {
@@ -73,14 +73,20 @@ text-align: center;
     padding-left: 40%;
     }
 
+
 /*subsecciones*/
 
 #encode-option, #decode-option {
-    width: 49%;
-    height: 275px;
-    padding: 2px;
+    width: 49.5%;
+    height: 255px;
     text-align: center;
     border-radius: 22px;
+    margin-top: 25px;
+}
+
+#encode-option h4, #encode-option h5,
+#decode-option h4, #decode-option h5 {
+    margin: 20px;
 }
 
 #encode-option:hover, #decode-option:hover {
@@ -88,13 +94,22 @@ text-align: center;
     cursor: pointer;
 }
 
+#encode-form {
+    width: 64%;
+}
+
+#decode-form {
+    width: 40%;
+}
 
 #encode-form, #decode-form {
-    width: 48%;
     height: 275px;
     padding-top: 8px;
 }
 
+#encode-form h3 {
+    margin-bottom: 10px;
+}
 
 /*botones*/
 
@@ -136,22 +151,22 @@ text-align: center;
     float: left;
 }
 
-#Key, #hat, #pipe, #encode-option, #Set, #cipher2 {
+#Key, #Key2, #hat, #encode-option, #Set, #cipher2, #pipe, #Set2 {
     float: right;
 }
 
 #logo {
     margin-left: 8px;
-    top: 2.2%;
+    top: 2%;
     left: 21.2%;
     position: absolute;
     border-radius: 8px;
 }
 
 #pipe {
-    top: -10%;
-    left: 1%;
-    position: relative;
+    top: 155%;
+    position: absolute;
+    margin-left: 52px;
 }
 
 #Key {
@@ -160,19 +175,21 @@ text-align: center;
 }
 
 #Key2 {
-    padding-left: 50px;
-    padding-top: 50px;
+    margin-left: 20px;
+    margin-top: 0px;
 }
-/*
-#hide-detective {
-    height: 157px;
-    width: 145px;
-} */
+
 #dog {
     height: 200px;
     width: 166px;
     padding-top: 4px;
     padding-right: 12px;
+}
+
+#Set2 {
+    width: 37%;
+    margin-left: 23px;
+    margin-top: -50px;
 }
 
 #cipher2 {
@@ -181,6 +198,7 @@ text-align: center;
     left: 0%;
     position: relative;
     border-radius: 8px;
+    margin-top:-4px;
 }
 
 /* input y output*/
