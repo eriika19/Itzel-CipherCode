@@ -5,13 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!---vincula CSS-->
+  <!---vincula CSS y la fuente de google fonts-->
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta|Allerta+Stencil&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap">
   <title>Cipher KIDS</title>
 </head>
 
 <body>
+  <!---template da el margen del cuadro-->
+  <div class="template">
   <!---encabezado, se utiliza ademas el id "header" para poder llamarlo con document.getElementById en el .js-->
   <header id="header">
     <img id="logo" src="img/cipher-dog.png" alt="cipher-dog">
@@ -20,7 +22,7 @@
     <p id="p-header2">KIDS</p>
   </header>
   <hr style="color:#1FCC7F; width: 96%; border-width: 4px; border-radius: 4px">
-  <!---contenido principal-->
+  <!---contenido principal donde se va a dividir por secciones para poner secciones a ocultar/mostrar-->
   <main>
     <!---seccion de bienvenida, donde se presenta Key, el personaje principal-->
     <div id="welcome" class="">
@@ -30,69 +32,73 @@
         <p>La detective más audaz del planeta.</p>
         <p>El equipo 'Cipher KIDS' y yo amamos descifrar enigmas y resolver misterios.</p>
         <!---boton para comenzar-->
-        <p align="center"> <button id="start">¿Comenzamos?</button> <br> <img id="pipe" src="img/pipe.png" alt="pipe"></p>
+        <p align="center" id="p-start"> <button id="start">¿Comenzamos?</button> <br> <img id="pipe" src="img/pipe.png" alt="pipe"></p>
       </div>
     </div>
-
+<!---seccion para opciones-->
     <div id="options" class="hide">
       <img id="Set" src="img/kid-glass.png" alt="Set">
       <p> ¡Hola, soy Set, el mejor amigo de Key. Que gusto verte!<br>
         <br> El es Cipher, el mejor perro detective del mundo.
         <img id="dog" src="img/dog.png" alt="dog"> <br>
         <br> Siempre está en busca de nuevas pistas.</p>
-        <p>¿Qué necesitas hoy?</p>
+        <p align="center">¿Qué necesitas hoy?</p>
+        <!--se hicieron dos bloques que comparten el mismo renglon en la pantalla-->
       <div id="decode-option">
-        <h4>¿Tienes un nuevo misterio/enigma? ¡Hay que resolverlo!</h4>
+        <p>¿Tienes un nuevo misterio/enigma? <br> ¡Hay que resolverlo!</p>
         <button id="decode-option-button"><img src="img/magnified.png" alt="decode-option"></button>
       </div>
       <div id="encode-option">
-        <h4>¿Informacion ultra secreta? ¡Que no caiga en las manos equivocadas!</h4>
+        <p>¿Información ultra secreta? <br> ¡Que no caiga en las manos equivocadas!</p>
         <button id="encode-option-button"><img src="img/detective-glasses.png" alt="encode-option"></button>
       </div>
     </div>
-
+<!--secion para descifrar-->
     <div id="decode" class="hide">
       <h2>Que interesante enigma...¡Vamos a descifrarlo!</h2>
       <img id="Set2" src="img/kid-glass2.png" alt="Set2">
+      <!--formulario para ingresar mensaje y offset-->
       <form id="decode-form">
         <label for="decode-input1">Ingresa tu enigma:</label>
+        <!---placeholder para poner un ejemplo o algun comentario y al vincular el id se puede relacionar su valor-->
         <input type="text" id="decode-input1" placeholder="Ingresa tu texto-enigma" required>
         <br>
-        <label for="decode-input2">Desplazamiento:</label>
+        <label class="label-offset" for="decode-input2">Ingresa tu número secreto:</label>
         <input type="text" id="decode-input2" placeholder="Offset" required>
         <br>
         <button id="decode-button" type="button">¡A descifrar!</button>
         <br>
         <p id="p-decode" class=""><br></p>
         <label id="decode-label" for="decode-output" class="hide">
-          <h3>¡Lo hemos descifrado!</h3>
+          <h4>¡Lo hemos descifrado!</h4>
         </label>
         <input id="decode-output" placeholder="Aquí aparecerá tu texto-enigma descifrado">
         <button id="return-options1">Regresar</button>&nbsp;&nbsp;&nbsp;<button id="go-exit1">Salir</button>
       </form>
     </div>
-
+<!--seccion para encriptar-->
     <div id="encode" class="hide">
       <h2>Echemos un vistazo... ¡Que información tan importante! Será mejor encriptarla</h2>
       <img id="Key2" src="img/KEY.png" alt="Key">
+      <!--formulario para ingresar mensaje y offset-->
       <form id="encode-form">
-        <label for="encode-input1">Ingresa tu información <br> "top-secret":</label>
+        <label for="encode-input1">Ingresa tu información "top-secret":</label>
         <input type="text" id="encode-input1" placeholder="Ingresa tu mensaje a encriptar" required>
         <br>
-        <label for="encode-input2">Desplazamiento:</label>
+        <label class="label-offset" for="encode-input2">Ingresa tu número secreto:</label>
         <input type="text" id="encode-input2" placeholder="Offset" required>
         <br>
         <button id="encode-button" type="button">¡Manos a la obra!</button>
         <p id="p-encode" class=""> <br> </p>
         <label id="encode-label" for="encode-output" class="hide">
-          <h3>¡Lo hemos encriptado!</h3>
-          Envía la pista secreta (offset) a tus amigos
+          <h4>¡Lo hemos encriptado!</h4>
+          Recuerda enviar tu número secreto (offset) a tus amigos
         </label>
         <input id="encode-output" placeholder="Aquí aparecerá tu texto cifrado"> <br>
         <button id="return-options2">Regresar</button>&nbsp;&nbsp;&nbsp;<button id="go-exit2">Salir</button>
       </form>
     </div>
-
+<!--seccion de despedida-->
     <div id="exit" class="hide">
       Muchas gracias por usar Cipher KIDS. <br><br><br> ¡Hasta la próxima aventura!
       <br><img id="lady-geek" src="img/LadyGeek.png" alt="LadyGeek">
@@ -101,6 +107,8 @@
   </main>
 
   <footer>Derechos Reservados <img id="cipher2" src="img/cipher-fingerprint.png" alt="cipher2"> </footer>
+
+  </div>
 
   <script src="cipher.js"></script>
   <script src="index.js"></script>
