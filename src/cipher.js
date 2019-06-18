@@ -1,36 +1,54 @@
 window.cipher = {
+
   encode: (n, str) => {
     let encodeStr = '';
-    const newStr = str.toUpperCase();
-    for (let i=0; i<newStr.length; i++){
-     if ([' ','Ñ',',','.',':','@','¿','?','¡','!'].indexOf(newStr[i]) > -1) {
-      encodeStr += newStr[i];
-      } else {
-        let newPosition = ((newStr.charCodeAt(i)-65+n)%26)+65;
-        let newLetter = String.fromCharCode(newPosition);
+    let newPosition;
+    let newLetter;
+    for (let i=0; i<str.length; i++){
+     if (123 > str.charCodeAt(i) && str.charCodeAt(i) > 96) {
+      newPosition = ((str.charCodeAt(i)-97+n)%26)+97;
+      newLetter = String.fromCharCode(newPosition);
+      encodeStr += newLetter;
+     } else {
+      if (91 > str.charCodeAt(i) && str.charCodeAt(i) > 64) {
+        newPosition = ((str.charCodeAt(i)-65+n)%26)+65;
+        newLetter = String.fromCharCode(newPosition);
         encodeStr += newLetter;
-      }
+     } else {
+       encodeStr += str[i];
+     }
     }
+  }
     return encodeStr;
   },
 
   decode: (n, str) => {
     let decodeStr = '';
-    const newStr = str.toUpperCase();
-    for (let i=0; i<newStr.length; i++){
-    if ([' ','Ñ',',','.',':','@','¿','?','¡','!'].indexOf(newStr[i]) > -1) {
-      decodeStr += newStr[i];
-      } else {
-        let newPosition;
-        if((newStr.charCodeAt(i)-65-n%26)<0) {
-          newPosition = 91 + (newStr.charCodeAt(i)-65-n%26);
+    let newPosition;
+    let newLetter;
+    for (let i=0; i<str.length; i++){
+      if (123 > str.charCodeAt(i) && str.charCodeAt(i) > 96) {
+        if((str.charCodeAt(i)-97-n%26)<0) {
+          newPosition = 123 + (str.charCodeAt(i)-97-n%26);
         } else {
-          newPosition = 65 + (newStr.charCodeAt(i)-65-n%26);
+          newPosition = 97 + (str.charCodeAt(i)-97-n%26);
         }
-        let newLetter = String.fromCharCode(newPosition);
+        newLetter = String.fromCharCode(newPosition);
         decodeStr += newLetter;
+      } else {
+        if (91 > str.charCodeAt(i) && str.charCodeAt(i) > 64) {
+          if((str.charCodeAt(i)-65-n%26)<0) {
+            newPosition = 91 + (str.charCodeAt(i)-65-n%26);
+          } else {
+            newPosition = 65 + (str.charCodeAt(i)-65-n%26);
+          }
+          newLetter = String.fromCharCode(newPosition);
+          decodeStr += newLetter;
+        } else {
+          decodeStr += str[i];
+        }
       }
     }
-    return decodeStr;
-  },
-};
+        return decodeStr;
+      },
+    };

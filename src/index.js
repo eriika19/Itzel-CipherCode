@@ -69,6 +69,8 @@ const cleanFormE = () => {
     pEncode.classList.remove('hide');
 };
 
+const clean = () => localStorage.clear() ;
+
 
 //"chismosas" que introduzcan el resultado de las funciones del objeto 'cipher'
 decodeButton.addEventListener('click', () => {
@@ -98,23 +100,23 @@ returnOptions1.addEventListener('click', (e) => {
     goSection(options);
     cleanFormD();
     e.preventDefault();
-    clear ();
+    clean ();
 });
 returnOptions2.addEventListener('click', (e) => {
     goSection(options);
     cleanFormE();
     e.preventDefault();
-    clear ();
+    clean ();
 });
 goExit1.addEventListener('click', (e) => {
     goSection(exit);
     cleanFormD();
     e.preventDefault();
-    clear ();
+    clean ();
 });
 goExit2.addEventListener('click', (e) => {
     goSection(exit);
     cleanFormE();
     e.preventDefault();
-    clear ();
+    clean ();
 });
