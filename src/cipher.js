@@ -13,19 +13,31 @@ window.cipher = {
     for (let i=0; i<str.length; i++){
       //evalua si el caracter es una mayuscula o minuscula
      if (123 > str.charCodeAt(i) && str.charCodeAt(i) > 96) {
+       //evaluacion para offset negativos
+      if((str.charCodeAt(i)-97+n%26)<0) {
+        //opcion en caso de que el offfset sea negativo se sumara 123 como sinonimo de la posicion de "a"
+        //y a partir de ahi se tomara el deplazamiento
+        newPosition = 123 + (str.charCodeAt(i)-97+n%26);
+      } else {
        //obtiene la posicion ASCII (#) del caracter del string que esta evaluandose,
-       //le resta 97 a ese # de poscion para pasarlo a nuestro abecedario y 
+       //le resta 97 a ese # de poscion para pasarlo a nuestro abecedario y
        //suma n(despalazamiento) para obtener el nuevo caracter en nuestro abecedario
        //obtiene residuo de 26(caracteres en el abecedario)
        //suma 97 para obtener la poscion del nuevo caracter en el ASCII
       newPosition = ((str.charCodeAt(i)-97+n)%26)+97;
+      }
+      //obtiene el caracter encriptado a partir de la nueva posicion en el codigo ASCII
       newLetter = String.fromCharCode(newPosition);
       //concatena en nuevo caracter ya encriptado a mi variable de string ecriptado
       encodeStr += newLetter;
      } else {
        //evalua si el caracter del string es mayuscula
       if (91 > str.charCodeAt(i) && str.charCodeAt(i) > 64) {
+        if((str.charCodeAt(i)-65+n%26)<0) {
+          newPosition = 91 + (str.charCodeAt(i)-65+n%26);
+        } else {
         newPosition = ((str.charCodeAt(i)-65+n)%26)+65;
+        }
         newLetter = String.fromCharCode(newPosition);
         encodeStr += newLetter;
      } else {
@@ -49,7 +61,8 @@ window.cipher = {
         //a la posicion del caracter en nuestro abecedario es < 0
         if((str.charCodeAt(i)-97-n%26)<0) {
           // si es menor a cero la nueva posicion del caracter en el codigo ASCII sera deducida
-          // al sumar el residuo del offset ingresado entre 26(abecedario)
+          // al sumar la posicion en ASCII, del caracter evaluado, menos 97, menos el residuo del 
+          // desplazamiento entre 26(abecedario) a 123(para comenzar el desplazamiento -1=z, -2=y,...,etc)
           newPosition = 123 + (str.charCodeAt(i)-97-n%26);
         } else {
           newPosition = 97 + (str.charCodeAt(i)-97-n%26);
@@ -66,6 +79,7 @@ window.cipher = {
           newLetter = String.fromCharCode(newPosition);
           decodeStr += newLetter;
         } else {
+          // cualquier otro caracter que no sea mayuscula o minuscula lo concatena directamente al nuevo string
           decodeStr += str[i];
         }
       }

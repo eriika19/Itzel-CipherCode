@@ -47,15 +47,7 @@ footer {
 
 
 /* secciones */
-#welcome, #exit {
-    font-size: 31px;
-}
-
-#exit {
-    text-align: center;
-}
-
-#options {
+#welcome, #options {
     font-size: 29px;
 }
 
@@ -63,8 +55,40 @@ footer {
     font-size: 20px;
 }
 
+#exit {
+    text-align: center;
+    font-size: 31px;
+}
+
+/* parrafos */
+#welcome h2 {
+    margin-top: 32px;
+    margin-bottom: 60px;
+    font-size: 40px;
+    }
+
 #welcome p {
 margin-top: 38px;
+}
+
+#options h2 {
+    margin-top: 17px;
+    margin-bottom: 38px;
+    font-size: 30px;
+    font-weight: 500;
+    }
+
+#p-question {
+    margin-top: 55px;
+    margin-bottom: 13px;
+}
+
+.options {
+    margin-bottom: 0px;
+}
+
+#encode-option p, #decode-option p {
+    margin-top:8px;
 }
 
 #p-header1 {
@@ -82,17 +106,12 @@ text-align: center;
 
 #encode-option, #decode-option {
     width: 49.5%;
-    height: 200px;
+    height: 189px;
     text-align: center;
     border-radius: 22px;
-    margin-top: -5px;
+    padding-top: 2.7;px;
     font-size: 18px;
     font-weight: 400;
-}
-
-#encode-option h4, #encode-option h5,
-#decode-option h4, #decode-option h5 {
-    margin: 20px;
 }
 
 #encode-option:hover, #decode-option:hover {
@@ -120,11 +139,8 @@ text-align: center;
 
 /*botones*/
 
-#return-start {
-    margin-top: 18px;
-}
-
 #start, #return-start {
+    margin-top: 22px;
     padding-top: 10px;
     border-radius: 10px;
     font-weight: bold;
