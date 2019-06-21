@@ -57,7 +57,7 @@ window.cipher = {
     for (let i=0; i<str.length; i++){
       //evalua si es minuscula
       if (123 > str.charCodeAt(i) && str.charCodeAt(i) > 96) {
-        //evalua si el residuo del offset ingresado entre 26(abecedario) restado 
+        //evalua si el residuo del offset ingresado entre 26(abecedario) restado
         //a la posicion del caracter en nuestro abecedario es < 0
         if((str.charCodeAt(i)-97-n%26)<0) {
           // si es menor a cero la nueva posicion del caracter en el codigo ASCII sera deducida
@@ -65,7 +65,7 @@ window.cipher = {
           // desplazamiento entre 26(abecedario) a 123(para comenzar el desplazamiento -1=z, -2=y,...,etc)
           newPosition = 123 + (str.charCodeAt(i)-97-n%26);
         } else {
-          newPosition = 97 + (str.charCodeAt(i)-97-n%26);
+          newPosition = 97 + ((str.charCodeAt(i)-97-n%26)%26);
         }
         newLetter = String.fromCharCode(newPosition);
         decodeStr += newLetter;
@@ -74,7 +74,7 @@ window.cipher = {
           if((str.charCodeAt(i)-65-n%26)<0) {
             newPosition = 91 + (str.charCodeAt(i)-65-n%26);
           } else {
-            newPosition = 65 + (str.charCodeAt(i)-65-n%26);
+            newPosition = 65 + ((str.charCodeAt(i)-65-n%26)%26);
           }
           newLetter = String.fromCharCode(newPosition);
           decodeStr += newLetter;
