@@ -4,21 +4,21 @@ const decodeButton = document.getElementById('decode-button');
 const encodeButton = document.getElementById('encode-button');
 
 //trayendo inputs
-let input1D = document.getElementById ('decode-input1')
-let input2D = document.getElementById ('decode-input2')
+const input1D = document.getElementById ('decode-input1')
+const input2D = document.getElementById ('decode-input2')
 
-let input1E = document.getElementById ('encode-input1')
-let input2E = document.getElementById ('encode-input2')
+const input1E = document.getElementById ('encode-input1')
+const input2E = document.getElementById ('encode-input2')
 
 //trayendo outputs y leyendas(frases que aparecen arriba del output) de outputs
-let decodeOutput = document.getElementById('decode-output');
-let encodeOutput = document.getElementById('encode-output');
+const decodeOutput = document.getElementById('decode-output');
+const encodeOutput = document.getElementById('encode-output');
 
-let decodeLabel = document.getElementById('decode-label');
-let encodeLabel = document.getElementById('encode-label');
+const decodeLabel = document.getElementById('decode-label');
+const encodeLabel = document.getElementById('encode-label');
 
-let pEncode = document.getElementById('p-encode');
-let pDecode = document.getElementById('p-decode');
+const pEncode = document.getElementById('p-encode');
+const pDecode = document.getElementById('p-decode');
 
 
 //declarando variables que traigan secciones y botones que van a redireccionar
@@ -74,7 +74,7 @@ const clean = () => localStorage.clear() ;
 //"chismosas" que introduzcen el resultado de las funciones del objeto 'cipher' en el input señalado
 decodeButton.addEventListener('click', () => {
     //pasa el valor de input2D a un numero, sino lo toma como string
-    let n = parseInt(input2D.value);
+    let n = parseInt(input2D.value,10);
     //sentencia que iguala el resultado de mi funcion ciopher.decode con el valor de mi cajita con id= decode-output
     decodeOutput.value = window.cipher.decode(n, input1D.value);
     //muestra las frases encima del output
@@ -83,7 +83,7 @@ decodeButton.addEventListener('click', () => {
     pDecode.classList.add('hide');
 });
 encodeButton.addEventListener('click', () => {
-    let n = parseInt(input2E.value);
+    let n = parseInt(input2E.value,10);
     encodeOutput.value = window.cipher.encode(n, input1E.value);
     encodeLabel.classList.remove('hide');
     pEncode.classList.add('hide');
@@ -107,24 +107,20 @@ encodeOption.addEventListener('click', () => goSection(encode));
 returnOptions1.addEventListener('click', (e) => {
     goSection(options);
     cleanFormD();
-    e.preventDefault();
     clean ();
 });
 returnOptions2.addEventListener('click', (e) => {
     goSection(options);
     cleanFormE();
-    e.preventDefault();
     clean ();
 });
 goExit1.addEventListener('click', (e) => {
     goSection(exit);
     cleanFormD();
-    e.preventDefault();
     clean ();
 });
 goExit2.addEventListener('click', (e) => {
     goSection(exit);
     cleanFormE();
-    e.preventDefault();
     clean ();
 });
